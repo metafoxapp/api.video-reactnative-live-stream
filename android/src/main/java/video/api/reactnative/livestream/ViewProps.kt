@@ -7,6 +7,7 @@ object ViewProps {
   const val AUDIO_CONFIG = "audio"
   const val VIDEO_CONFIG = "video"
   const val IS_MUTED = "isMuted"
+  const val IS_FLASH_MODE = "isFlashMode"
   const val CAMERA = "camera"
   const val ZOOM_RATIO = "zoomRatio"
   const val NATIVE_ZOOM_ENABLED = "enablePinchedZoom"

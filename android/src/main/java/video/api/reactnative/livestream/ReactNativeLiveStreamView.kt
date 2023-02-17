@@ -92,6 +92,12 @@ class ReactNativeLiveStreamView(context: Context) : ConstraintLayout(context), I
       field = value
     }
 
+  var isFlashMode: Boolean = false
+    get() = apiVideoLiveStream.isFlashMode
+    set(value) {
+      apiVideoLiveStream.isFlashMode = value
+    }
+
   var zoomRatio: Float
     get() = apiVideoLiveStream.zoomRatio
     set(value) {

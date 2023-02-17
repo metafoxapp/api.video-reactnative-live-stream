@@ -78,6 +78,11 @@ class ReactNativeLiveStreamViewManager : SimpleViewManager<ReactNativeLiveStream
     view.isMuted = isMuted
   }
 
+  @ReactProp(name = ViewProps.IS_FLASH_MODE)
+  fun isMuted(view: ReactNativeLiveStreamView, isFlashMode: Boolean) {
+    view.isFlashMode = isFlashMode
+  }
+
   @ReactProp(name = ViewProps.NATIVE_ZOOM_ENABLED)
   fun enablePinchedZoom(view: ReactNativeLiveStreamView, enablePinchedZoom: Boolean) {
     view.enablePinchedZoom = enablePinchedZoom

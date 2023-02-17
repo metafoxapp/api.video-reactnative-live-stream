@@ -85,6 +85,15 @@ class ReactNativeLiveStreamView: UIView {
         }
     }
 
+    private var isFlashMode: Bool {
+        get {
+            return liveStream.isFlashMode
+        }
+        set {
+            liveStream.isFlashMode = newValue
+        }
+    }
+
     private var audioConfig: AudioConfig {
         get {
             liveStream.audioConfig

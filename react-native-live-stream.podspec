@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  s.dependency 'ApiVideoLiveStream', :git => "https://github.com/metafoxapp/api.video-ios-live-stream"
 end
+# s.dependency 'ApiVideoLiveStream', :git => "https://github.com/metafoxapp/api.video-ios-live-stream"

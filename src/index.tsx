@@ -176,6 +176,7 @@ const LiveStreamView = forwardRef<LiveStreamMethods, LiveStreamProps>(
         video={nativeLiveStreamProps.video}
         isMuted={nativeLiveStreamProps.isMuted}
         audio={nativeLiveStreamProps.audio}
+        isFlashMode={nativeLiveStreamProps.isFlashMode}
         zoomRatio={nativeLiveStreamProps.zoomRatio}
         enablePinchedZoom={nativeLiveStreamProps.enablePinchedZoom}
         onConnectionSuccess={nativeLiveStreamProps.onConnectionSuccess}

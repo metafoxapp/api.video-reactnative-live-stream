@@ -18,6 +18,7 @@ import video.api.livestream.interfaces.IConnectionChecker
 import video.api.livestream.models.AudioConfig
 import video.api.livestream.models.VideoConfig
 import video.api.livestream.views.ApiVideoView
+import video.api.reactnative.livestream.R
 
 /**
  * Manages both livestream and camera preview.
@@ -263,8 +264,8 @@ constructor(
      * @see [stopStreaming]
      */
     fun startStreaming(
-        streamKey: String,
-        url: String = context.getString(R.string.default_rtmp_url),
+      streamKey: String,
+      url: String = context.getString(R.string.default_rtmp_url),
     ) {
         require(!isStreaming) { "Stream is already running" }
         require(streamKey.isNotEmpty()) { "Stream key must not be empty" }

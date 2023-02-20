@@ -92,7 +92,7 @@ class ReactNativeLiveStreamView(context: Context) : ConstraintLayout(context), I
       field = value
     }
 
-  var isFlashMode: Boolean = false
+  var isFlashMode: Boolean
     get() = apiVideoLiveStream.isFlashMode
     set(value) {
       apiVideoLiveStream.isFlashMode = value

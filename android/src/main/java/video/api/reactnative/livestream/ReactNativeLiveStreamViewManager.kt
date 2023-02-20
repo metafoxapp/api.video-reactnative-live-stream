@@ -79,7 +79,7 @@ class ReactNativeLiveStreamViewManager : SimpleViewManager<ReactNativeLiveStream
   }
 
   @ReactProp(name = ViewProps.IS_FLASH_MODE)
-  fun isMuted(view: ReactNativeLiveStreamView, isFlashMode: Boolean) {
+  fun isFlashMode(view: ReactNativeLiveStreamView, isFlashMode: Boolean) {
     view.isFlashMode = isFlashMode
   }
 

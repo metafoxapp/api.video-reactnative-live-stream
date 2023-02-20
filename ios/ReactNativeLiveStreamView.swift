@@ -3,7 +3,6 @@
 //  api.video-reactnative-live-stream
 //
 
-import ApiVideoLiveStream
 import AVFoundation
 import CoreGraphics
 import Foundation

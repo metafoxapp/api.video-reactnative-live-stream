@@ -18,6 +18,7 @@ type LiveStreamProps = {
     gopDuration?: number;
   };
   isMuted?: boolean;
+  isFlashMode?: boolean;
   audio?: {
     bitrate?: number;
     sampleRate?: 8000 | 16000 | 32000 | 44100 | 48000;
@@ -40,6 +41,7 @@ const LIVE_STREAM_PROPS_DEFAULTS: NativeLiveStreamProps = {
     gopDuration: 1,
   },
   isMuted: false,
+  isFlashMode: false,
   audio: {
     bitrate: 128000,
     sampleRate: 44100,

@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  spec.dependency "HaishinKit", "1.4.2"
+  s.dependency "HaishinKit", "1.4.2"
 end

@@ -77,6 +77,7 @@ const LiveStreamView = forwardRef<LiveStreamMethods, LiveStreamProps>(
     const nativeLiveStreamProps: NativeLiveStreamProps = {
       ...LIVE_STREAM_PROPS_DEFAULTS,
       ...props,
+      isFlashMode: props.isFlashMode ?? LIVE_STREAM_PROPS_DEFAULTS.isFlashMode,
       video: {
         ...LIVE_STREAM_PROPS_DEFAULTS.video,
         bitrate: getDefaultBitrate(

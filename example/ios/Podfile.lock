@@ -1,6 +1,4 @@
 PODS:
-  - ApiVideoLiveStream (1.3.3):
-    - HaishinKit (= 1.4.2)
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
@@ -75,10 +73,7 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
-  - HaishinKit (1.4.2):
-    - Logboard (~> 2.3.0)
   - libevent (2.1.12)
-  - Logboard (2.3.0)
   - OpenSSL-Universal (1.1.1100)
   - RCT-Folly (2021.06.28.00-v2):
     - boost
@@ -290,7 +285,6 @@ PODS:
   - React-logger (0.69.1):
     - glog
   - react-native-live-stream (1.2.3):
-    - ApiVideoLiveStream (= 1.3.3)
     - React-Core
   - React-perflogger (0.69.1)
   - React-RCTActionSheet (0.69.1):
@@ -427,7 +421,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - ApiVideoLiveStream
     - CocoaAsyncSocket
     - Flipper
     - Flipper-Boost-iOSX
@@ -439,9 +432,7 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - fmt
-    - HaishinKit
     - libevent
-    - Logboard
     - OpenSSL-Universal
     - SocketRocket
     - YogaKit
@@ -517,7 +508,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  ApiVideoLiveStream: 667de27c8e017c67b9f5c183051b52b766b6d321
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
@@ -534,9 +524,7 @@ SPEC CHECKSUMS:
   FlipperKit: 09f334dd75c2119e864815dfd555b7503c23cca5
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 3d02b25ca00c2d456734d0bcff864cbc62f6ae1a
-  HaishinKit: bd4544ad56d567ec951490ccc49c9d70810a7c67
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
-  Logboard: f3a37d2a4040b82b7e2eb39765897e2c9c5ec024
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: b9d9fe1fc70114b751c076104e52f3b1b5e5a95a
   RCTRequired: ae07282b2ec9c90d7eb98251603bc3f82403d239
@@ -552,7 +540,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 758e70947c232828a66b5ddc42d02b4d010fa26e
   React-jsinspector: 55605caf04e02f9b0e05842b786f1c12dde08f4b
   React-logger: ca970551cb7eea2fd814d0d5f6fc1a471eb53b76
-  react-native-live-stream: 411a7eece88239bd10c0cb8e514336d911e1e05c
+  react-native-live-stream: 67f6cfba3d501db9c8b39f8083f38e94447c28c7
   React-perflogger: c9161ff0f1c769993cd11d2751e4331ff4ceb7cd
   React-RCTActionSheet: 2d885b0bea76a5254ef852939273edd8de116180
   React-RCTAnimation: 353fa4fc3c19060068832dd32e555182ec07be45

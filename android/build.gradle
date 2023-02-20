@@ -1,7 +1,12 @@
 buildscript {
-  // Buildscript is evaluated before everything else so we can't use getExtOrDefault
-  def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['ReactNativeLiveStream_kotlinVersion']
+  ext {
+      // StreamPack
+        streamPackVersion = "2.5.2"
+        kotlin_version = "1.6.10"
+        dokka_version = "1.6.10"
+  }
 
+  // Buildscript is evaluated before everything else so we can't use getExtOrDefault
   repositories {
     google()
     mavenCentral()
@@ -130,5 +135,13 @@ dependencies {
   implementation "androidx.multidex:multidex:2.0.1"
   implementation "androidx.constraintlayout:constraintlayout:2.1.3"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation "https://github.com/metafoxapp/api.video-android-live-stream"
+  implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    api "io.github.thibaultbee:streampack:$streamPackVersion"
+    implementation "io.github.thibaultbee:streampack-extension-rtmp:$streamPackVersion"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
 }

@@ -84,7 +84,7 @@ class ReactNativeLiveStreamView: UIView {
         }
     }
 
-    private var isFlashMode: Bool {
+    @objc var isFlashMode: Bool {
         get {
             return liveStream.isFlashMode
         }

@@ -84,13 +84,8 @@ class ReactNativeLiveStreamView: UIView {
         }
     }
 
-    @objc var isFlashMode: Bool {
-        get {
-            return liveStream.isFlashMode
-        }
-        set {
-            liveStream.isFlashMode = newValue
-        }
+    @objc func toggleFlash(newValue: Bool) {
+        liveStream.isFlashMode = newValue
     }
 
     private var audioConfig: AudioConfig {

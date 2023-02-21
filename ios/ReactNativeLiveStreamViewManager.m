@@ -6,7 +6,6 @@ RCT_EXPORT_VIEW_PROPERTY(audio, NSDictionary)
 RCT_EXPORT_VIEW_PROPERTY(video, NSDictionary)
 RCT_EXPORT_VIEW_PROPERTY(camera, NSString)
 RCT_EXPORT_VIEW_PROPERTY(isMuted, BOOL)
-RCT_EXPORT_VIEW_PROPERTY(isFlashMode, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(enablePinchedZoom, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(zoomRatio, double)
 
@@ -23,6 +22,10 @@ RCT_EXTERN_METHOD(
 )
 RCT_EXTERN_METHOD(
                   zoomRatioFromManager:(nonnull NSNumber *)node withZoomRatio:(nonnull NSNumber)zoomRatio
+)
+
+RCT_EXTERN_METHOD(
+                  toggleFlashFromManager:(nonnull NSNumber *)node value: (nonnull BOOL) newValue
 )
 
 @end

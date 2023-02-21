@@ -30,6 +30,15 @@ class ReactNativeLiveStreamViewManager: RCTViewManager {
         }
     }
 
+    @objc func toggleFlashFromManager(_ node: NSNumber, value newValue: Bool) {
+        DispatchQueue.main.async {
+            let component = self.bridge.uiManager.view(
+                forReactTag: node
+            ) as! ReactNativeLiveStreamView
+            component.toggleFlash(newValue: newValue)
+        }
+    }
+
     @objc func zoomRatioFromManager(_ node: NSNumber, withZoomRatio zoomRatio: NSNumber) {
         DispatchQueue.main.async {
             let component = self.bridge.uiManager.view(

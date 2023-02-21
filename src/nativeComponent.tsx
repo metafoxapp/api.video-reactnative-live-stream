@@ -14,7 +14,6 @@ export type NativeLiveStreamProps = {
     resolution: Resolution;
     gopDuration: number;
   };
-  isFlashMode: boolean;
   isMuted: boolean;
   audio: {
     bitrate: number;

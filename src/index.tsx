@@ -18,7 +18,6 @@ type LiveStreamProps = {
     gopDuration?: number;
   };
   isMuted?: boolean;
-  isFlashMode?: boolean;
   audio?: {
     bitrate?: number;
     sampleRate?: 8000 | 16000 | 32000 | 44100 | 48000;
@@ -41,7 +40,6 @@ const LIVE_STREAM_PROPS_DEFAULTS: NativeLiveStreamProps = {
     gopDuration: 1,
   },
   isMuted: false,
-  isFlashMode: false,
   audio: {
     bitrate: 128000,
     sampleRate: 44100,
@@ -77,7 +75,6 @@ const LiveStreamView = forwardRef<LiveStreamMethods, LiveStreamProps>(
     const nativeLiveStreamProps: NativeLiveStreamProps = {
       ...LIVE_STREAM_PROPS_DEFAULTS,
       ...props,
-      isFlashMode: props.isFlashMode ?? LIVE_STREAM_PROPS_DEFAULTS.isFlashMode,
       video: {
         ...LIVE_STREAM_PROPS_DEFAULTS.video,
         bitrate: getDefaultBitrate(
@@ -162,6 +159,14 @@ const LiveStreamView = forwardRef<LiveStreamMethods, LiveStreamProps>(
           []
         );
       },
+      toggleFlash: (newValue: boolean) => {
+        UIManager.dispatchViewManagerCommand(
+          findNodeHandle(nativeRef.current),
+          UIManager.getViewManagerConfig('ReactNativeLiveStreamView').Commands
+            .toggleFlashFromManager,
+          [newValue]
+        );
+      },
       setZoomRatio: (zoomRatio: number) => {
         UIManager.dispatchViewManagerCommand(
           findNodeHandle(nativeRef.current),
@@ -179,7 +184,6 @@ const LiveStreamView = forwardRef<LiveStreamMethods, LiveStreamProps>(
         video={nativeLiveStreamProps.video}
         isMuted={nativeLiveStreamProps.isMuted}
         audio={nativeLiveStreamProps.audio}
-        isFlashMode={nativeLiveStreamProps.isFlashMode}
         zoomRatio={nativeLiveStreamProps.zoomRatio}
         enablePinchedZoom={nativeLiveStreamProps.enablePinchedZoom}
         onConnectionSuccess={nativeLiveStreamProps.onConnectionSuccess}

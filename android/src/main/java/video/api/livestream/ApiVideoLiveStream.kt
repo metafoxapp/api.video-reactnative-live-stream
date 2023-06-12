@@ -130,8 +130,14 @@ constructor(
         /**
          * Calls when the surface size has been changed. This is for internal purpose only. Do not call it.
          */
-        override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) =
-            Unit
+        @SuppressLint("MissingPermission")
+        override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
+          try {
+            startPreview()
+          } catch (e: UnsupportedOperationException) {
+            Log.i(TAG, "Can't start preview: ${e.message}")
+          }
+        }
 
         /**
          * Calls when the surface size has been destroyed. This is for internal purpose only. Do not call it.
